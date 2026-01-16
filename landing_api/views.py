@@ -22,7 +22,7 @@ class LandingAPI(APIView):
         # get: Obtiene todos los elementos de la colección
         data = ref.get()
         
-        # Devuelve un arreglo JSON
+        # Devuelve un arreglo JSON si logra acceder
         return Response(data, status=status.HTTP_200_OK)
     
     def post(self, request):
